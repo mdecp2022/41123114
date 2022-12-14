@@ -2,7 +2,33 @@
 <p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">cmsite：wcms 使用</span></span><a href="https://github.com/mdecycu/cmsimde"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">https://github.com/mdecycu/cmsimde</span></span></a><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">作為子模塊</span></span></p>
 <p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">github倉儲 :<a href="https://github.com/mdecp2022/site-fxyjkyxzx">https://github.com/mdecp2022/site-fxyjkyxzx</a></span></span></p>
 <h1>HW</h1>
-<h2>W10</h2>
+<h2>W06</h2>
+<p><a href="https://mdecp2022.github.io/site-fxyjkyxzx/content/Python.html?src2=https://gist.githubusercontent.com/fxyjkyxzx/e40f97ebe62eb451adda4f996e8702dc/raw/abd1e40c3b0bf0aa133bf1771c499f66a737deeb/HW_6">ed1</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">from browser import document, html
+
+brython_div1 = document["brython_div1"]
+"""
+brython_div1 &lt;= html.BUTTON("hello")
+brython_div1 &lt;= html.BR()
+brython_div1 &lt;= html.A("google", href="https://google.com")
+"""
+
+url = "https://mde.tw/studlist/2022fall/1b.txt"
+data = open(url).read().split("\n")
+mdecp2022 = "https://mdecp2022.github.io/site-"
+data = data[1:-1]
+for i in data:
+    stud = i.split("\t")
+    stud_num = stud[0]
+    github_acc = stud[1]
+    #print(stud_num, github_acc)
+    if github_acc == "":
+        github_acc = stud_num
+    site = mdecp2022 + github_acc
+    link = html.A(stud_num, href=site)
+    brython_div1 &lt;= link
+    brython_div1 &lt;= html.BR()</pre>
+<p></p><h2>W10</h2>
 <p><a href="https://mdecp2022.github.io/site-fxyjkyxzx/content/Python.html?src=https://gist.githubusercontent.com/fxyjkyxzx/726b0f3c2fb20e52f1dfa16e6fe128c1/raw/eae62abe371eee58f61c10f1553cd2d732bd93b4/W10_hw-py">ex1</a></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">for i in range(1, 10, 2):
     print(i,sep=",")
@@ -78,7 +104,8 @@ print("以下為 w10 缺考名單:")
 # 因為 cp_abs 資料為 list, 在此利用 for 迴圈逐一列出
 for stud in cp_abs:
     print(stud)</pre>
-<p></p><h2>w12</h2>
+<p></p>
+<h2>w12</h2>
 <p><a href="https://mdecp2022.github.io/site-fxyjkyxzx/content/Python.html?src=https://gist.githubusercontent.com/fxyjkyxzx/9e1b8456224bb7306fa0d30bb395bd05/raw/903f78ec8480052ca16465fb45b379b73a57bc05/W12_hw-py"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">ex1</span></span></span></span></a></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">user_input_temp = input("請輸入攝氏溫度值:")
 print(type(user_input_temp))
