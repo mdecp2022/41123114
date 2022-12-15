@@ -3,7 +3,9 @@
 <p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">github倉儲 :<a href="https://github.com/mdecp2022/site-fxyjkyxzx">https://github.com/mdecp2022/site-fxyjkyxzx</a></span></span></p>
 <h1>HW</h1>
 <h2>W06</h2>
-<p>ex1</p>
+<p>1a學號與個人網站:</p>
+<p><a href="https://mdecp2022.github.io/site-fxyjkyxzx/content/Python.html?src2=https://gist.githubusercontent.com/fxyjkyxzx/e40f97ebe62eb451adda4f996e8702dc/raw/1d2a4c14c22b03bbfb2e6621f1bd3d226986781d/HW_6">ex1</a></p>
+<p></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">from browser import document, html
 
 brython_div1 = document["brython_div1"]
@@ -28,7 +30,8 @@ for i in data:
     link = html.A(stud_num, href=site)
     brython_div1 &lt;= link
     brython_div1 &lt;= html.BR()</pre>
-<p>ex2</p>
+<p>隨機抽點程式:</p>
+<p><a href="https://mdecp2022.github.io/site-fxyjkyxzx/content/Python.html?src=https://gist.githubusercontent.com/fxyjkyxzx/3717fef767e55dc9856cd915b47c1ea5/raw/47d7bf3f89fc9ef213b164031ce3957d9ac5a281/HW_6">ex2</a></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># Python 的註解分為單行註解與多行, 單行註解可在字串前方放入 #
 '''多行註解則可以透過三個單引號前後標註字串或文字段落內容, 
 也可以使用三個雙引號作為多行註解的標註
@@ -55,8 +58,8 @@ num = 5
 # 利用 for 重複迴圈與 range() 變數, 列印出 (利用 print() 函式) 已經隨機排列次序的 stud 數列的最前面 num 個學號值
 for i in range(num):
     print(stud[i])</pre>
-<p></p>
-<h2>W10</h2>
+<p></p><h2>W10</h2>
+<p>顯示1.3.5.7.9:</p>
 <p><a href="https://mdecp2022.github.io/site-fxyjkyxzx/content/Python.html?src=https://gist.githubusercontent.com/fxyjkyxzx/726b0f3c2fb20e52f1dfa16e6fe128c1/raw/eae62abe371eee58f61c10f1553cd2d732bd93b4/W10_hw-py">ex1</a></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">for i in range(1, 10, 2):
     print(i,sep=",")
@@ -65,9 +68,9 @@ for i in range(num):
 
 #For表示重複迴圈,1代表起始從1開始,到10結束,2代表增量值
 #Print表示顯示i的值
-</pre>
-<h2>W11</h2>
-<p><a href="https://mdecp2022.github.io/site-fxyjkyxzx/content/Python.html?src=https://gist.githubusercontent.com/fxyjkyxzx/30d62b893a61fc39137023b770781358/raw/b38bd258067d5a761f4d7e3b48527c0f8ed4b002/W10">ex1</a>:</p>
+</pre><h2>W11</h2>
+<p>Cp1a第十週考試分數跟出缺席</p>
+<p><a href="https://mdecp2022.github.io/site-fxyjkyxzx/content/Python.html?src=https://gist.githubusercontent.com/fxyjkyxzx/30d62b893a61fc39137023b770781358/raw/10bbe23b2d007ac352252dfbcac29c930e1476ba/W11">ex1</a>:</p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># 導入 ast 模組是希望利用其 literal_eval() 將 dict 格式的字串轉為 dict 資料型別
 # 以利隨後的取值運算
 import ast
@@ -86,11 +89,11 @@ def get_stud(c_name):
     stud = data[:-1]
     # get_stud() 函式最後將對應班級的修課人員學號以數列格式傳回
     return stud
-# 利用 "1b" 作為輸入從 get_stud() 取出該班修課學員學號數列
-cp_stud = get_stud("1b")
+# 利用 "1a" 作為輸入從 get_stud() 取出該班修課學員學號數列
+cp_stud = get_stud("1a")
 # get w10 quiz result
-# # 以下為 1b w10 quiz 考試結果的 JSON 檔案
-cp_w10_quiz_url = "https://gist.githubusercontent.com/mdecycu/9df4b372ac1b7386cf259ced15f1a2b2/raw/a6825f13b1bb0b61e09e74dd117729eefe1d947f/20221110_cp1b_w10_quiz.json"
+# # 以下為 1a w10 quiz 考試結果的 JSON 檔案
+cp_w10_quiz_url = "https://gist.githubusercontent.com/mdecycu/9df4b372ac1b7386cf259ced15f1a2b2/raw/9e8bf693a2805631aa12992db4d4f23e0f64e868/2022_1112_cp1a_w10_quiz.json"
 def get_score(url):
     # 利用 open() 與 read() 讀取考試結果 JSON 檔案
     json_data = open(url).read()
@@ -132,8 +135,7 @@ print("以下為 w10 缺考名單:")
 # 因為 cp_abs 資料為 list, 在此利用 for 迴圈逐一列出
 for stud in cp_abs:
     print(stud)</pre>
-<p></p>
-<h2>w12</h2>
+<p></p><h2>w12</h2>
 <p><a href="https://mdecp2022.github.io/site-fxyjkyxzx/content/Python.html?src=https://gist.githubusercontent.com/fxyjkyxzx/9e1b8456224bb7306fa0d30bb395bd05/raw/903f78ec8480052ca16465fb45b379b73a57bc05/W12_hw-py"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">ex1</span></span></span></span></a></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">user_input_temp = input("請輸入攝氏溫度值:")
 print(type(user_input_temp))
