@@ -3,6 +3,18 @@
 <p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">github倉儲 :<a href="https://github.com/mdecp2022/site-fxyjkyxzx">https://github.com/mdecp2022/site-fxyjkyxzx</a></span></span></p>
 <h1>HW</h1>
 <h2>W05</h2>
+<p><a href="https://mdecp2022.github.io/site-fxyjkyxzx/content/Python.html?src=https://gist.githubusercontent.com/fxyjkyxzx/c345d618422a01373c08017100c2df6f/raw/4db9759c4ed74f7bf89aa7556d2109b51b5472bd/HW_5">ex1</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import random
+import string
+ 
+def password_generator(size=4, chars=string.ascii_lowercase + string.digits):
+# string.ascii_lowercase 是小寫的a~z，string.digits 是0~9
+ 
+    return ''.join(random.choice(chars) for _ in range(size))
+ 
+for i in range(10):
+    print(password_generator(4))</pre>
+<p></p>
 <h2>W06</h2>
 <h3>1a學號與個人網站:</h3>
 <p><a href="https://mdecp2022.github.io/site-fxyjkyxzx/content/Python.html?src2=https://gist.githubusercontent.com/fxyjkyxzx/e40f97ebe62eb451adda4f996e8702dc/raw/1d2a4c14c22b03bbfb2e6621f1bd3d226986781d/HW_6">ex1</a></p>
@@ -234,6 +246,7 @@ c = input("請輸入攝像氏溫度值")
 c=浮動（c）
 打印(c,c*9/5+32)
 </pre>
+<h2>W14</h2>
 <h2>W15</h2>
 <p><a href="https://mdecp2022.github.io/site-fxyjkyxzx/content/Python.html?=https://gist.githubusercontent.com/fxyjkyxzx/f2e9eff5909df77e8b5b9702207cf12e/raw/e0aa12698903bf93ad03b729732c8f50c3876e39/W15">ex1</a></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># 這個程式用於 demo 綠色方塊沿著特定網格路徑行走
@@ -420,7 +433,6 @@ grid(origx, origy, w, h, wnum, hnum, pixel=1, color="black")
 
 doc["power"].bind("click", launchAnimation)
 #browser.timer.set_interval(game, 100)</pre>
-<p></p>
 <h3>w15</h3>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">一.為何學習計算機程式需要建立個人倉儲?
 	A:可以隨時用手機或電腦,開啟線上資料

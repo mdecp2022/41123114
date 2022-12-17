@@ -14,7 +14,8 @@ def password_generator(size=4, chars=string.ascii_lowercase + string.digits):
  
 for i in range(10):
     print(password_generator(4))</pre>
-<p></p><h2>W06</h2>
+<p></p>
+<h2>W06</h2>
 <h3>1a學號與個人網站:</h3>
 <p><a href="https://mdecp2022.github.io/site-fxyjkyxzx/content/Python.html?src2=https://gist.githubusercontent.com/fxyjkyxzx/e40f97ebe62eb451adda4f996e8702dc/raw/1d2a4c14c22b03bbfb2e6621f1bd3d226986781d/HW_6">ex1</a></p>
 <p></p>
@@ -245,7 +246,51 @@ c = input("請輸入攝像氏溫度值")
 c=浮動（c）
 打印(c,c*9/5+32)
 </pre>
-<h2>W15</h2>
+<h2>W14</h2>
+<p><a href="https://mdecp2022.github.io/site-fxyjkyxzx/content/Python.html?src=https://gist.githubusercontent.com/fxyjkyxzx/0667f40a5a0eabcac0d783d3eaf54740/raw/34dee1ba07ca8d0e100d44c76060e637c3f4b581/HW_14">ex1</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import ast
+ 
+# get stud_list first
+ 
+def get_stud(c_name):
+    courses = {"1a": "0747", "1b": "0761", "2a": "0773", "2b": "0786"}
+    c = courses[c_name]
+    url = "https://nfu.cycu.org/?semester=1111&amp;courseno=" + c + "&amp;column=True"
+    data = open(url).read().split("\n")
+    stud = data[:-1]
+    return stud
+     
+cp_stud = get_stud("1a")
+ 
+# 取得第14週考試的成績的url
+cp_w14_quiz_url = "https://gist.githubusercontent.com/mdecycu/9df4b372ac1b7386cf259ced15f1a2b2/raw/a48d36ae883bde8efd07b25bfddaed8f13200353/2022_1209_cp_w14_1a_quiz.json"
+ 
+def get_score(url):
+    json_data = open(url).read()
+    big_dict = ast.literal_eval(json_data)
+    data = big_dict["body"]["testuser"]
+    quiz_dict = {}
+    for i in data:
+        stud_id = data[i]["user_name"]
+        stud_score = int(float(data[i]["total_score"]))
+        quiz_dict[stud_id] = stud_score
+    return quiz_dict
+     
+cp_quiz = get_score(cp_w14_quiz_url)
+cp_abs = []
+for stud in cp_stud:
+    try:
+        print(stud, cp_quiz[stud])
+    except:
+        # 缺考者沒有 quiz 成績
+        print(stud, "缺")
+        cp_abs.append(stud)
+# 列出缺考名單
+print("="*20)
+print("以下為 w14 缺考名單:")
+for stud in cp_abs:
+    print(stud)</pre>
+<p></p><h2>W15</h2>
 <p><a href="https://mdecp2022.github.io/site-fxyjkyxzx/content/Python.html?=https://gist.githubusercontent.com/fxyjkyxzx/f2e9eff5909df77e8b5b9702207cf12e/raw/e0aa12698903bf93ad03b729732c8f50c3876e39/W15">ex1</a></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># 這個程式用於 demo 綠色方塊沿著特定網格路徑行走
 # 從 Brython 程式庫中的 browser 模組導入 document 類別, 並以簡寫設定為 doc
@@ -431,7 +476,6 @@ grid(origx, origy, w, h, wnum, hnum, pixel=1, color="black")
 
 doc["power"].bind("click", launchAnimation)
 #browser.timer.set_interval(game, 100)</pre>
-<p></p>
 <h3>w15</h3>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">一.為何學習計算機程式需要建立個人倉儲?
 	A:可以隨時用手機或電腦,開啟線上資料
