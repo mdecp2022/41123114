@@ -5,7 +5,11 @@
 <h1>HW</h1>
 <h2>W05</h2>
 <p><a href="https://mdecp2022.github.io/site-fxyjkyxzx/content/Python.html?src=https://gist.githubusercontent.com/fxyjkyxzx/c345d618422a01373c08017100c2df6f/raw/4db9759c4ed74f7bf89aa7556d2109b51b5472bd/HW_5">ex1</a></p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import random
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">亂數產生器:
+
+心得:需要設置隨機數字的時候很好用
+
+import random
 import string
  
 def password_generator(size=4, chars=string.ascii_lowercase + string.digits):
@@ -19,7 +23,7 @@ for i in range(10):
 <h2>W06</h2>
 <h3>1a學號與個人網站:</h3>
 <p><a href="https://mdecp2022.github.io/site-fxyjkyxzx/content/Python.html?src2=https://gist.githubusercontent.com/fxyjkyxzx/e40f97ebe62eb451adda4f996e8702dc/raw/1d2a4c14c22b03bbfb2e6621f1bd3d226986781d/HW_6">ex1</a></p>
-<p></p>
+<p>心得:可以方便查看自己與同學的網站進度</p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">from browser import document, html
 
 brython_div1 = document["brython_div1"]
@@ -46,6 +50,7 @@ for i in data:
     brython_div1 &lt;= html.BR()</pre>
 <h3>隨機抽點程式:</h3>
 <p><a href="https://mdecp2022.github.io/site-fxyjkyxzx/content/Python.html?src=https://gist.githubusercontent.com/fxyjkyxzx/3717fef767e55dc9856cd915b47c1ea5/raw/47d7bf3f89fc9ef213b164031ce3957d9ac5a281/HW_6">ex2</a></p>
+<p>心得:需要隨機抽點同學的時候可以使用,利用for迴圈重複執行抽點程式,可決定抽點的人數</p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># Python 的註解分為單行註解與多行, 單行註解可在字串前方放入 #
 '''多行註解則可以透過三個單引號前後標註字串或文字段落內容, 
 也可以使用三個雙引號作為多行註解的標註
@@ -75,6 +80,7 @@ for i in range(num):
 <p></p>
 <h2>W10</h2>
 <p>顯示1.3.5.7.9:</p>
+<p>心得:練習了如何使用for迴圈做基本的的數列</p>
 <p><a href="https://mdecp2022.github.io/site-fxyjkyxzx/content/Python.html?src=https://gist.githubusercontent.com/fxyjkyxzx/726b0f3c2fb20e52f1dfa16e6fe128c1/raw/eae62abe371eee58f61c10f1553cd2d732bd93b4/W10_hw-py">ex1</a></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">for i in range(1, 10, 2):
     print(i,sep=",")
@@ -87,6 +93,7 @@ for i in range(num):
 <h2>W11</h2>
 <h3>Cp1a第十週考試分數跟出缺席:</h3>
 <p><a href="https://mdecp2022.github.io/site-fxyjkyxzx/content/Python.html?src=https://gist.githubusercontent.com/fxyjkyxzx/30d62b893a61fc39137023b770781358/raw/10bbe23b2d007ac352252dfbcac29c930e1476ba/W11">ex1</a>:</p>
+<p>心得:可以快速查看考試分數和有無缺考</p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># 導入 ast 模組是希望利用其 literal_eval() 將 dict 格式的字串轉為 dict 資料型別
 # 以利隨後的取值運算
 import ast
@@ -153,6 +160,7 @@ for stud in cp_abs:
     print(stud)</pre>
 <h3>Cp1b第十一週考試分數跟出缺席加入平均分數跟缺考人數:</h3>
 <p><a href="https://mdecp2022.github.io/site-fxyjkyxzx/content/Python.html?src=https://gist.githubusercontent.com/fxyjkyxzx/571b641f634b0cffb04d2ba85e0ccee4/raw/a04afe496640cde3e56607f26ebe69b9aa2c3572/W11">ex2</a></p>
+<p>心得:加入了計算平均分數和缺考人數,一開始寫的時候不知道怎麼把資料用成數字進行運算,後來在老師的解答下,用float把資料轉換之後,解決了這個問題</p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># 導入 ast 模組是希望利用其 literal_eval() 將 dict 格式的字串轉為 dict 資料型別
 # 以利隨後的取值運算
 import ast
@@ -228,26 +236,107 @@ print("平均分數",x/z)</pre>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"></pre>
 <p></p>
 <h2>W12</h2>
-<p><a href="https://mdecp2022.github.io/site-fxyjkyxzx/content/Python.html?src=https://gist.githubusercontent.com/fxyjkyxzx/9e1b8456224bb7306fa0d30bb395bd05/raw/903f78ec8480052ca16465fb45b379b73a57bc05/W12_hw-py"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">ex1</span></span></span></span></a></p>
-<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">user_input_temp = input("請輸入攝氏溫度值:")
-print(type(user_input_temp))
-
-# Brython 的 input() 可以接受輸入提示字串, 跳出瀏覽器輸入表單後, 將輸入內容以字串取回
+<pre class="brush:html;auto-links:false;gutter:false;toolbar:false" contenteditable="false">W12練習一:</pre>
+<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">心得:簡單的小程式,熟悉float</span></span></span></span></p>
+<p><a href="https://mdecp2022.github.io/site-fxyjkyxzx/content/Python.html?src=https://gist.githubusercontent.com/fxyjkyxzx/9e1b8456224bb7306fa0d30bb395bd05/raw/903f78ec8480052ca16465fb45b379b73a57bc05/W12_hw-py"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">ex1</span></span></span></span></a>:</p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># Brython 的 input() 可以接受輸入提示字串, 跳出瀏覽器輸入表單後, 將輸入內容以字串取回
+user_input_temp = input("請輸入攝氏溫度值:")
 # 接著列出 user_input_temp 變數的資料型別
 print(type(user_input_temp))</pre>
-<p><span style="vertical-align: inherit;"><span style="vertical-align: inherit;"></span></span></p>
-<h2>W13</h2>
+<pre class="brush:html;auto-links:false;gutter:false;toolbar:false" contenteditable="false">W12練習二:</pre>
+<p>心得:直接在網頁上用一個按鈕方便很多</p>
+<p><a href="https://mdecp2022.github.io/site-fxyjkyxzx/content/Python.html?src=https://gist.githubusercontent.com/fxyjkyxzx/f0bcd692ca00c9efa0ef840314f1f504/raw/db0369580e116e13185cc4f72282e256b92628a6/W12">ex2:</a></p>
+<pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># Brython 的 input() 可以接受輸入提示字串, 跳出瀏覽器輸入表單後, 將輸入內容以字串取回
+user_input_temp = input("請輸入攝氏溫度值:")
+# 接著列出 user_input_temp 變數的資料型別
+print(type(user_input_temp))
+# 到這裡已知利用 input() 函式將傳回字串, 接著以 float() 將字串轉為浮點數
+user_input_temp = float(user_input_temp)
+# 因為攝氏溫度乘上 9/5 之後再加上 32 就可以得到對應的華氏溫度值
+Fahrenheit = (user_input_temp*9/5) + 32
+# 到這裡, Fahrenheit 資料型別為浮點數, 而 user_input_temp 在第 8 行也轉為浮點數
+# 要將兩個浮點數與字串相加, 都必須透過 str() 轉為字串
+print("攝氏 " + str(user_input_temp) + " 度, 等於華氏 " + str(Fahrenheit) + " 度.")</pre>
+<div class="line number1 index0 alt2"><br/><code class="py comments"></code></div>
+<!-- 
+在動態網站頁面中啟用 Brython 執行環境的用法, 請注意動態網站執行所在路徑
+-->
+<script src="/get_page/cmsimde/static/brython.js"></script>
+<script src="/get_page/cmsimde/static/brython_stdlib.js"></script>
+<!-- 啟動 Brython -->
+<p>
+<script>
+window.onload=function(){
+brython({debug:1, pythonpath:['./../cmsimde/static/','/downloads/py/']});
+}
+</script>
+</p>
+<p>
+<script type="text/python">
+from browser import html, document
+# Brython 的 input() 可以接受輸入提示字串, 跳出瀏覽器輸入表單後, 將輸入內容以字串取回
+user_input_temp = input("請輸入攝氏溫度值:")
+# 接著列出 user_input_temp 變數的資料型別
+# 但是在頁面中 Brython 的 print() 將會顯示在 log 而非頁面
+print(type(user_input_temp))
+# 這裡定義一個 brython_div 變數, 透過 document[] 與頁面中 id="brython_div" 的位置對應
+brython_div = document["brython_div"]
+# 看能不能直接將變數值字串列在標註 id 為 "brython_div" 的頁面位置
+brython_div <= user_input_temp
+# 之後若要列出 html, 則需要透過 Brython 的 html 模組
+</script>
+</p><h3>w12-1</h3>
+<!-- 
+在動態網站頁面中啟用 Brython 執行環境的用法, 請注意動態網站執行所在路徑
+-->
+<script src="/static/brython.js"></script>
+<script src="/static/brython_stdlib.js"></script>
+<!-- 啟動 Brython -->
+<p>
+<script>
+window.onload=function(){
+brython({debug:1, pythonpath:['/static/','/downloads/py/']});
+}
+</script>
+<!-- 以下事先在頁面中加入 id="brython_div" 的 div 標註
+之後可利用 Brython 的 document 模組與此 html 標註對應
+--></p>
+<!-- 利用 html 建立一個 id="btn1" 的按鈕 -->
+<p><button id="btn1">取使用者輸入</button></p>
+<div id="brython_div"></div>
+<p>
+<script type="text/python">
+from browser import html, document
+# Brython 的 input() 可以接受輸入提示字串, 跳出瀏覽器輸入表單後, 將輸入內容以字串取回
+#user_input_temp = input("請輸入攝氏溫度值:")
+# 接著列出 user_input_temp 變數的資料型別
+# 但是在頁面中 Brython 的 print() 將會顯示在 log 而非頁面
+#print(type(user_input_temp))
+# 這裡定義一個 brython_div 變數, 透過 document[] 與頁面中 id="brython_div" 的位置對應
+brython_div = document["brython_div"]
+# 看能不能直接將變數值字串列在標註 id 為 "brython_div" 的頁面位置
+#brython_div <= user_input_temp
+# 之後若要列出 html, 則需要透過 Brython 的 html 模組
+# 接下來要設法按下按鈕之後才執行取使用者 input 的流程
+# 首先 comment 掉前面的 input() 與 print(), 同時蓋掉輸出, 並利用事件導向設計一個函式
+def get_input(env):
+    user_input_temp = input("請輸入攝氏溫度值:")
+    brython_div <= user_input_temp
+# 透過 Brython browser 模組中的 document 物件將 id="btn1" 的物件中的 bind() 方法
+# 讓使用者 click 後會經由瀏覽器中的 event 通知執行 get_input 函式
+document["btn1"].bind('click', get_input)
+</script>
+</p><h2>W13</h2>
 <p><a href="https://mdecp2022.github.io/site-fxyjkyxzx/content/Python.html?src=https://gist.githubusercontent.com/fxyjkyxzx/6d3f6f9e70da2341140b81d6e8f16fac/raw/16cdfd75d5aed7819e0aa256521f22d9e35dd328/W13_temp_ex1.py"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">ex1</span></span></a></p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">'''
 f=c*9/5+32
 c=(f-32)*5/9
 '''
-c = input("請輸入攝像氏溫度值")
-#print(類型(c))
-c=浮動（c）
-打印(c,c*9/5+32)
-</pre>
-<h2>W14</h2>
+c = input("請輸入攝氏溫度值")
+#print(type(c))
+c=float(c)
+print(c,c*9/5+32)</pre><h2>W14</h2>
+<p>第十四週考試成績和缺考名單:</p>
 <p><a href="https://mdecp2022.github.io/site-fxyjkyxzx/content/Python.html?src=https://gist.githubusercontent.com/fxyjkyxzx/0667f40a5a0eabcac0d783d3eaf54740/raw/34dee1ba07ca8d0e100d44c76060e637c3f4b581/HW_14">ex1</a></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false">import ast
  
@@ -291,9 +380,9 @@ print("="*20)
 print("以下為 w14 缺考名單:")
 for stud in cp_abs:
     print(stud)</pre>
-<p></p>
-<h2>W15</h2>
+<p></p><h2>W15</h2>
 <h3>W15綠色方塊</h3>
+<p>心得:一開始不懂程式的時候連要改的地方都沒有頭緒,後來看懂之後就把程式改成老師要的走法,不過還是沒辦法做出貪食蛇</p>
 <p><a href="https://mdecp2022.github.io/site-fxyjkyxzx/content/Python.html?src=https://gist.githubusercontent.com/fxyjkyxzx/f2e9eff5909df77e8b5b9702207cf12e/raw/f63567f0340c5fa432c574d90472016c80914efe/W15">ex1</a></p>
 <pre class="brush:html;auto-links:false;toolbar:false" contenteditable="false"># 這個程式用於 demo 綠色方塊沿著特定網格路徑行走
 # 從 Brython 程式庫中的 browser 模組導入 document 類別, 並以簡寫設定為 doc
@@ -504,7 +593,8 @@ doc["power"].bind("click", launchAnimation)
 	A:方格的移動值是隨機值
 七.變數, 字串, 整數, 浮點數, 數列, Tuple, Dictionary, 函式, 重複迴圈, class, 物件導向, 資料庫, 這些名詞對您而言代表甚麼?
         A:寫程式語言的基礎,藉由不同應用這些程式語言的功能,來達成想要的目的</pre>
-<p></p><h1>Python</h1>
+<p></p>
+<h1>Python</h1>
 <p><a href="https://en.wikipedia.org/wiki/Python_(programming_language)"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">https://en.wikipedia.org/wiki/Python_(programming_language)</span></span></a></p>
 <h4><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">例子：</span></span></h4>
 <p style="padding-left: 30px;"><a href="https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d"><span style="vertical-align: inherit;"><span style="vertical-align: inherit;">https://gist.github.com/mdecycu/d9082d678096bd58378d6afe2c7fa05d</span></span></a></p>
